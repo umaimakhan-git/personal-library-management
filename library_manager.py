@@ -54,7 +54,7 @@ def search_books(data):
 
     # Check if input is valid
     if search_by not in ["title", "author"]:
-        print("❌ Invalid search type. Please enter only 'title' or 'author'.")
+        print("Invalid search type. Please enter only 'title' or 'author'.")
         return
 
     search_term = input(f"Enter the {search_by}: ").strip().lower()
@@ -66,7 +66,7 @@ def search_books(data):
             status = "Read" if book["read"] else "Not Read"
             print(f"Title: {book['title']}, Author: {book['author']}, Genre: {book['genre']}, Year: {book['year']}, Status: {status}")
     else:
-        print(f"🔍 No books found for {search_by}: {search_term}")
+        print(f"No books found for {search_by}: {search_term}")
 
 
 def list_books(data):
